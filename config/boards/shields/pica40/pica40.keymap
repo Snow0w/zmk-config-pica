@@ -68,7 +68,8 @@
                   &mt LGUI ESC    &mo 1      &lt 2 RET              &kp SPACE       &kp BSPC    &mt RALT DEL
                         >;
                         
-                        sensor-bindings = <&inc_dec_kp RS(RC(RA(L))) RS(RC(RA(H))) &inc_dec_kp RA(L) RA(H)>;
+                        sensor-bindings = <&inc_dec_kp LS(LC(LA(L))) LS(LC(LA(H))) &inc_dec_kp LA(L) LA(H)>;
+                        // sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                 };
                 
                 lower_layer {
