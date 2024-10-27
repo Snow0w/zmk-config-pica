@@ -20,10 +20,6 @@
     tapping-term-ms = <150>;
 };
 
-&sensors {
-    triggers-per-rotation = <20>;
-};
-
 / {
 
     behaviors {        
