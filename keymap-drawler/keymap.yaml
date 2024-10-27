@@ -1,0 +1,175 @@
+# FILL IN below field with a value like {qmk_keyboard: ferris/sweep}
+# or {ortho_layout: {split: true, rows: 3, columns: 5, thumbs: 2}}
+# see https://github.com/caksoylar/keymap-drawer/blob/main/KEYMAP_SPEC.md#layout
+layout: {ortho_layout: {split: true, rows: 3, columns: 6, thumbs: 3, drop_pinky: true }}
+layers:
+  default:
+  - {t: Q, h: й}
+  - {t: W, h: ц}
+  - {t: E, h: у}
+  - {t: R, h: к}
+  - {t: T, h: е}
+  - {t: Y, h: н}
+  - {t: U, h: г}
+  - {t: I, h: ш}
+  - {t: O, h: щ}
+  - {t: P, h: з}
+  - {t: TAB, h: CTRL}
+  - {t: A, h: ф}
+  - {t: S, h: ы}
+  - {t: D, h: в}
+  - {t: F, h: а}
+  - {t: G, h: п}
+  - {t: H, h: р}
+  - {t: J, h: о}
+  - {t: K, h: л}
+  - {t: L, h: д}
+  - {t: ;, h: ж}
+  - {t: '''', h: э}
+  - SHFT
+  - {t: Z, h: я}
+  - {t: X, h: ч}
+  - {t: C, h: с}
+  - {t: V, h: м}
+  - {t: B, h: и}
+  - {t: N, h: т}
+  - {t: M, h: ь}
+  - {t: ',', h: б}
+  - {t: ., h: ю}
+  - /
+  - SHFT
+  - CMD
+  - {t: ESC, h: lower}
+  - {t: SPACE, h: raise}
+  - RET
+  - BSPC
+  - {t: DEL, h: ALT}
+  lower:
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - {t: TAB, h: CTRL}
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - ^
+  - '&'
+  - '*'
+  - (
+  - )
+  - \
+  - SHFT
+  - '`'
+  - +
+  - '-'
+  - '{'
+  - '['
+  - ']'
+  - '}'
+  - '='
+  - _
+  - '~'
+  - SHFT
+  - CMD
+  - {type: held}
+  - adjust
+  - ','
+  - .
+  - {t: '?', h: ALT}
+  raise:
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - {t: ▽, type: trans}
+  - PAGE DOWN
+  - PAGE UP
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: TAB, h: CTRL}
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - LEFT
+  - DOWN
+  - UP
+  - RIGHT
+  - {t: '[', h: х}
+  - {t: ']', h: ъ}
+  - SHFT
+  - F11
+  - F12
+  - BSPC
+  - DEL
+  - {t: ▽, type: trans}
+  - {t: '[', h: х}
+  - {t: ']', h: ъ}
+  - {t: '`', h: ё}
+  - '"'
+  - ''''
+  - SHFT
+  - CMD
+  - adjust
+  - {type: held}
+  - ','
+  - .
+  - ALT
+  adjust:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - OUT TOG
+  - BRI DEC
+  - BRI INC
+  - MUTE
+  - VOL DN
+  - VOL UP
+  - BT CLR
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '4'}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - 'RESET'
+  - 'BOOT LOAD'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - 'BOOT LOAD'
+  - 'RESET'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {type: held}
+  - PREV
+  - PLAY
+  - NEXT
+combos:
+- p: [14, 17]
+  k: 'CAPS'
+  l: [default]
+  a: top
+
