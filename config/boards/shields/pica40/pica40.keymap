@@ -175,7 +175,7 @@
                         >;
                         
                         // sensor-bindings = <&inc_dec_kp LS(LC(LA(L))) LS(LC(LA(H))) &inc_dec_kp LA(L) LA(H)>;
-                        // sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN >;
+                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN >;
                         // sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                         // sensor-bindings = <&inc_dec_kp RIGHT_ARROW LEFT_ARROW &inc_dec_kp UP_ARROW DOWN_ARROW>;
                 };
