@@ -116,7 +116,7 @@
 //                                   '--------+----------+----------'       '---------+----------+---------'
 
                         bindings = <
-                          &kp F1     &kp F2     &kp F3       &kp F4       &kp F5            &LG(SPACE)               &kp RSHFT           &kp LCTRL       &kp LALT      &kp LGUI
+                          &kp F1     &kp F2     &kp F3       &kp F4       &kp F5            &kp LG(SPACE)               &kp RSHFT           &kp LCTRL       &kp LALT      &kp LGUI
    &mt LCTRL TAB          &hm RGUI F6     &hm LALT F7     &hm LCTRL F8       &hm LSHFT F9       &kp F10           &kp LEFT_ARROW       &kp DOWN_ARROW          &kp UP_ARROW     &kp RIGHT_ARROW    &kp LEFT_BRACKET      &kp RIGHT_BRACKET
    &trans              &kp F11    &kp F12    &kp LSHFT       &kp DEL       &kp INS            &kp LEFT_BRACKET   &kp RIGHT_BRACKET     &kp GRAVE             &kp DOUBLE_QUOTES             &kp APOS       &trans
                                      &mt LGUI TAB   &mo 3   &trans                    &kp RET       &kp BSPC    &mt LALT DEL
@@ -210,7 +210,7 @@
 //                                   '--------+----------+----------'       '---------+----------+---------'
 
                         bindings = <
-                          &kp F1     &kp F2     &kp F3       &kp F4       &kp F5            &LG(SPACE)               &kp RSHFT           &kp LCTRL       &kp LALT      &kp LGUI
+                          &kp F1     &kp F2     &kp F3       &kp F4       &kp F5            &kp LG(SPACE)               &kp RSHFT           &kp LCTRL       &kp LALT      &kp LGUI
    &mt LCTRL TAB          &hm RGUI F6     &hm LALT F7     &hm LCTRL F8       &hm LSHFT F9       &kp F10           &kp LEFT_ARROW       &kp DOWN_ARROW          &kp UP_ARROW     &kp RIGHT_ARROW    &kp LEFT_BRACKET      &kp RIGHT_BRACKET
    &trans              &kp F11    &kp F12    &kp LSHFT       &kp DEL       &kp INS            &kp LEFT_BRACKET   &kp RIGHT_BRACKET     &kp GRAVE             &kp DOUBLE_QUOTES             &kp APOS       &trans
                                      &mt LGUI TAB   &mo 7   &trans                    &kp RET       &kp BSPC    &mt LALT DEL
