@@ -2,6 +2,29 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
+#include "zmk-helpers/helper.h"
+
+// switch to Windows-mode (using WinCompose) for helper script
+#undef OS_UNICODE_LEAD
+#undef OS_UNICODE_TRAIL
+#define OS_UNICODE_LEAD &macro_tap &kp RALT &kp U  // <- WinCompose sequence
+#define OS_UNICODE_TRAIL &macro_tap &kp RET  // <- Return terminates unicode input on Windows
+
+// use helper-script to define Windows unicode macros, e.g.,
+ZMK_UNICODE_PAIR( win_ae,   N0, N0,  E, N4,   N0, N0,  C, N4 )
+
+// activate macOS-mode for helper script
+#undef OS_UNICODE_LEAD
+#undef OS_UNICODE_TRAIL
+#define OS_UNICODE_LEAD &macro_press &kp LALT  // <- macOS compose sequence (must be activated in system preferences)
+#define OS_UNICODE_TRAIL &macro_release &kp LALT  // <- Releasing Left-Alt terminates unicode input on macOns
+
+ZMK_UNICODE_SINGLE(mac_excl, N0, N0, N2, N1) // !
+ZMK_UNICODE_SINGLE(mac_quote, N0, N0, N2, N2) // "
+ZMK_UNICODE_SINGLE(mac_hash, N0, N0, N2, N3) // #
+ZMK_UNICODE_SINGLE(mac_dollar, N0, N0, N2, N4) // $
+
+
 
 #define QWERTY 0
 #define NUMB 1
@@ -11,6 +34,7 @@
 #define KEYS_L 0 1 2 3 4 10 11 12 13 14 15 22 23 24 25 26 27  // left-hand keys
 #define KEYS_R 5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33  // right-hand keys
 #define THUMBS 34 35 36 37 38 39
+
 
 &lt {
     tapping-term-ms = <150>;
@@ -31,6 +55,15 @@
         quick_tap_ms = <0>;
         flavor = "tap-preferred";
         bindings = <&kp>, <&kp>;
+        };
+        hm_mac_excl: hm_mac_excl {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HOMEROW_MODS";
+        #binding-cells = <2>;
+        tapping-term-ms = <125>;
+        quick_tap_ms = <0>;
+        flavor = "tap-preferred";
+        bindings = <&kp>, <&mac_excl>;
         };
         hmr: homerow_mods_r {
             compatible = "zmk,behavior-hold-tap";
@@ -98,7 +131,7 @@
 //                                   '--------+---------+---------'       '-------+---------+---------'
                         bindings = <
                      &kp N1     &kp N2       &kp N3            &kp N4             &kp N5            &kp N6                   &kp N7                     &kp N8                 &kp N9                   &kp N0
-   &mt LCTRL TAB     &hm RGUI EXCL     &hm LALT AT            &hm LCTRL HASH           &hm LSHFT DLLR             &kp PRCNT         &kp CARET                &hm LSHFT AMPS                   &hm LCTRL STAR        &hm LALT LPAR                 &hm RGUI RPAR   &kp BSLH
+   &mt LCTRL TAB     &hm_mac_excl RGUI 0     &hm LALT AT            &hm LCTRL HASH           &hm LSHFT DLLR             &kp PRCNT         &kp CARET                &hm LSHFT AMPS                   &hm LCTRL STAR        &hm LALT LPAR                 &hm RGUI RPAR   &kp BSLH
    &trans         &kp GRAVE       &kp PLUS       &kp MINUS       &kp LEFT_BRACE       &kp LEFT_BRACKET  &kp RIGHT_BRACKET        &kp RIGHT_BRACE            &kp EQUAL           &kp UNDERSCORE           &kp TILDE     &trans
                                              &mt LGUI TAB           &trans               &mo 3        &kp RET       &kp BSPC    &mt LALT DEL
                         >;
