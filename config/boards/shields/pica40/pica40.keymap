@@ -55,6 +55,97 @@
                 , <&macro_release &kp LALT>
                 ;
         };
+        // )
+        win_right_parent:  win_right_parent {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N4 &kp KP_N1 >
+                , <&macro_release &kp LALT>
+                ;
+        };
+        // {
+        win_left_brace:  win_left_brace {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N3>
+                , <&macro_release &kp LALT>
+                ;
+        };
+        // }
+        win_right_brace:  win_right_brace {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N5>
+                , <&macro_release &kp LALT>
+                ;
+        };
+        // [
+        win_left_bracket:  win_left_bracket {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N9 &kp KP_N1 >
+                , <&macro_release &kp LALT>
+                ;
+        };
+        // ]
+        win_right_bracket:  win_right_bracket {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N9 &kp KP_N3 >
+                , <&macro_release &kp LALT>
+                ;
+        };
+        // <
+        win_left_triag:  win_left_triag {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N6 &kp KP_N0 >
+                , <&macro_release &kp LALT>
+                ;
+        };
+        // >
+        win_right_triag:  win_right_triag {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N6 &kp KP_N2 >
+                , <&macro_release &kp LALT>
+                ;
+        };
+        // /
+        win_slash:  win_slash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N4 &kp KP_N7 >
+                , <&macro_release &kp LALT>
+                ;
+        };
+        // \
+
+        win_back_slash:  win_back_slash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N9 &kp KP_N2 >
+                , <&macro_release &kp LALT>
+                ;
+        };
     };
 
     combos {
@@ -69,10 +160,64 @@
             key-positions = <3 4 5 6>;
             bindings = <&tog 4>;
         };
-        combo_left_parent {
+        win_combo_slash {
+            timeout-ms = <50>;
+            key-positions = <30 31>;
+            bindings = <&win_slash>;
+
+        };
+        win_combo_backslash {
+            timeout-ms = <50>;
+            key-positions = <24 25>;
+            bindings = <&win_back_slash>;
+
+        };
+        win_combo_left_triag {
+            timeout-ms = <50>;
+            key-positions = <12 13>;
+            bindings = <&win_left_triag>;
+
+        };
+        win_combo_right_triag {
+            timeout-ms = <50>;
+            key-positions = <18 19>;
+            bindings = <&win_right_triag>;
+
+        };
+        win_combo_left_bracket {
+            timeout-ms = <50>;
+            key-positions = <25 26>;
+            bindings = <&win_left_bracket>;
+
+        };
+        win_combo_right_bracket {
+            timeout-ms = <50>;
+            key-positions = <29 30>;
+            bindings = <&win_right_bracket>;
+
+        };
+        win_combo_left_parent {
             timeout-ms = <50>;
             key-positions = <13 14>;
             bindings = <&win_left_parent>;
+
+        };
+        win_combo_right_parent {
+            timeout-ms = <50>;
+            key-positions = <17 18>;
+            bindings = <&win_right_parent>;
+
+        };
+        win_combo_left_brace {
+            timeout-ms = <50>;
+            key-positions = <2 3>;
+            bindings = <&win_left_brace>;
+
+        };
+        win_combo_right_brace {
+            timeout-ms = <50>;
+            key-positions = <6 7>;
+            bindings = <&win_right_brace>;
 
         };
     };
