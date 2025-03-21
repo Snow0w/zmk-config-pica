@@ -8,6 +8,8 @@
 #define NAVI 2
 #define ADJUST 3
 
+#define COMBOTIME 30
+
 #define KEYS_L 0 1 2 3 4 10 11 12 13 14 15 22 23 24 25 26 27  // left-hand keys
 #define KEYS_R 5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33  // right-hand keys
 #define THUMBS 34 35 36 37 38 39
@@ -301,7 +303,7 @@
     combos {
         compatible = "zmk,combos";
         combo_caps_word {
-            timeout-ms = <50>;
+            timeout-ms = <COMBOTIME>;
             key-positions = <14 17>;
             bindings = <&kp CAPS>;
         };
@@ -311,64 +313,75 @@
             bindings = <&tog 4>;
         };
         win_combo_slash {
-            timeout-ms = <50>;
+            timeout-ms = <COMBOTIME>;
             key-positions = <30 31>;
             bindings = <&win_slash>;
-
+            layers = <0>;
         };
         win_combo_backslash {
-            timeout-ms = <50>;
+            timeout-ms = <COMBOTIME>;
             key-positions = <24 25>;
             bindings = <&win_back_slash>;
-
+            layers = <0>;
         };
+        mac_combo_slash {
+            timeout-ms = <COMBOTIME>;
+            key-positions = <30 31>;
+            bindings = <&kp KP_N8>;
+            layers = <4>;
+        };
+        mac_combo_backslash {
+            timeout-ms = <COMBOTIME>;
+            key-positions = <24 25>;
+            bindings = <&kp LS(KP_N8)>;
+            layers = <4>;
         win_combo_left_triag {
-            timeout-ms = <50>;
+            timeout-ms = <COMBOTIME>;
             key-positions = <12 13>;
             bindings = <&win_left_triag>;
-
+            layers = <0>;
         };
         win_combo_right_triag {
-            timeout-ms = <50>;
+            timeout-ms = <COMBOTIME>;
             key-positions = <18 19>;
             bindings = <&win_right_triag>;
-
+            layers = <0>;
         };
         win_combo_left_bracket {
-            timeout-ms = <50>;
+            timeout-ms = <COMBOTIME>;
             key-positions = <25 26>;
             bindings = <&win_left_bracket>;
-
+            layers = <0>;
         };
         win_combo_right_bracket {
-            timeout-ms = <50>;
+            timeout-ms = <COMBOTIME>;
             key-positions = <29 30>;
             bindings = <&win_right_bracket>;
-
+            layers = <0>;
         };
         win_combo_left_parent {
-            timeout-ms = <50>;
+            timeout-ms = <COMBOTIME>;
             key-positions = <13 14>;
             bindings = <&win_left_parent>;
-
+            layers = <0>;
         };
         win_combo_right_parent {
-            timeout-ms = <50>;
+            timeout-ms = <COMBOTIME>;
             key-positions = <17 18>;
             bindings = <&win_right_parent>;
-
+            layers = <0>;
         };
         win_combo_left_brace {
-            timeout-ms = <50>;
+            timeout-ms = <COMBOTIME>;
             key-positions = <2 3>;
             bindings = <&win_left_brace>;
-
+            layers = <0>;
         };
         win_combo_right_brace {
-            timeout-ms = <50>;
+            timeout-ms = <COMBOTIME>;
             key-positions = <6 7>;
             bindings = <&win_right_brace>;
-
+            layers = <0>;
         };
     };
 
@@ -415,7 +428,7 @@
                      &kp N1     &kp N2       &kp N3            &kp N4             &kp N5            &kp N6                   &kp N7                     &kp N8                 &kp N9                   &kp N0
    &kp TAB     &hm RGUI EXCL     &win_sobaka            &win_reshetka           &win_dollar             &kp PRCNT         &win_cap                &win_and                   &hm LCTRL STAR        &win_quote                 &win_semicolon   &kp BSLH
    &trans         &win_tilde       &win_apostro       &kp MINUS       &kp PLUS       &trans  &win_pipe        &kp EQUAL            &kp UNDERSCORE           &win_double_quote           &win_colon     &trans
-                                             &mt LCTRL TAB           &trans               &mo 3        &win_comma       &win_dot    &win_question
+                      &mt LCTRL TAB           &trans               &mo 3        &win_comma       &win_dot    &win_question
                         >;
                 };
                 
@@ -486,7 +499,7 @@
                   &kp Q       &kp W      &kp E     &kp R           &kp T   &kp Y  &kp U           &kp I        &kp O     &kp P
    &kp TAB  &hm RGUI A       &hm LALT S      &hm LCTRL D     &hm LSHFT F           &kp G   &kp H  &hm LSHFT J           &hm LCTRL K        &hm LALT L     &hm RGUI SEMI   &kp SQT
    &trans      &kp Z       &kp X      &kp C     &kp V           &kp B   &kp N  &kp M           &kp COMMA    &kp DOT   &kp FSLH   &trans
-                  &mt LCTRL TAB    &lt 5 ESC      &lt 6 SPACE              &lt 8 RET       &kp BSPC    &mt LALT DEL
+                  &mt RGUI TAB    &lt 5 ESC      &lt 6 SPACE              &lt 8 RET       &kp BSPC    &mt LALT DEL
                         >;
                         
                         // sensor-bindings = <&inc_dec_kp LS(LC(LA(L))) LS(LC(LA(H))) &inc_dec_kp LA(L) LA(H)>;
@@ -509,7 +522,7 @@
                      &kp N1     &kp N2       &kp N3            &kp N4             &kp N5            &kp N6                   &kp N7                     &kp N8                 &kp N9                   &kp N0
    &kp TAB     &hm RGUI EXCL     &hm LALT AT            &hm LCTRL HASH           &hm LSHFT DLLR             &kp PRCNT         &kp CARET                &hm LSHFT AMPS                   &hm LCTRL STAR        &hm LALT LPAR                 &hm RGUI RPAR   &kp BSLH
    &trans         &kp GRAVE       &kp PLUS       &kp MINUS       &kp LEFT_BRACE       &kp LEFT_BRACKET  &kp RIGHT_BRACKET        &kp RIGHT_BRACE            &kp EQUAL           &kp UNDERSCORE           &kp TILDE     &trans
-                                             &mt LCTRL TAB           &trans               &mo 7        &kp RET       &kp BSPC    &mt LALT DEL
+                                             &mt RGUI TAB           &trans               &mo 7        &kp RET       &kp BSPC    &mt LALT DEL
                         >;
                 };
                 
@@ -528,7 +541,7 @@
                           &kp F1     &kp F2     &kp F3       &kp F4       &kp F5            &kp LG(SPACE)               &kp RSHFT           &kp LCTRL       &kp LALT      &kp LGUI
    &kp TAB          &hm RGUI F6     &hm LALT F7     &hm LCTRL F8       &hm LSHFT F9       &kp F10           &kp LEFT_ARROW       &kp DOWN_ARROW          &kp UP_ARROW     &kp RIGHT_ARROW    &kp LEFT_BRACKET      &kp RIGHT_BRACKET
    &trans              &kp F11    &kp F12    &kp LSHFT       &kp DEL       &kp INS            &kp LEFT_BRACKET   &kp RIGHT_BRACKET     &kp GRAVE             &kp DOUBLE_QUOTES             &kp APOS       &trans
-                                     &mt LGUI TAB   &mo 7   &trans                    &kp RET       &kp BSPC    &mt LALT DEL
+                                     &mt RGUI TAB   &mo 7   &trans                    &kp LS(KP_N9)       &kp KP_N9    &kp LS(KP_N3)
                         >;
                 };
 
