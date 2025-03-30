@@ -481,7 +481,7 @@
                         bindings = <
                      &kp N1     &kp N2       &kp N3            &kp N4             &kp N5            &kp N6                   &kp N7                     &kp N8                 &kp N9                   &kp N0
    &kp TAB     &hm RGUI EXCL     &win_sobaka            &win_reshetka           &win_dollar             &kp PRCNT         &win_cap                &win_and                   &hm LCTRL STAR        &win_quote                 &win_semicolon   &kp BSLH
-   &trans         &win_tilde       &win_apostro       &kp MINUS       &kp PLUS       &trans  &win_pipe        &kp EQUAL            &kp UNDERSCORE           &win_double_quote           &win_colon     &trans
+   &trans         &win_tilde       &win_apostro       &kp MINUS       &kp PLUS       &kp PLUS  &win_pipe        &kp EQUAL            &kp UNDERSCORE           &win_double_quote           &win_colon     &trans
                       &mt LCTRL TAB           &trans               &mo 3        &win_comma       &win_dot    &win_question
                         >;
                 };
@@ -575,7 +575,7 @@
                         bindings = <
                      &kp N1     &kp N2       &kp N3            &kp N4             &kp N5            &kp N6                   &kp N7                     &kp N8                 &kp N9                   &kp N0
    &kp TAB     &hm RGUI EXCL     &hm LALT AT            &hm LCTRL HASH           &hm LSHFT DLLR             &kp PRCNT         &kp CARET                &hm LSHFT AMPS                   &hm LCTRL STAR        &kp KP_N1           &kp KP_N2   &kp BSLH
-   &trans         &kp KP_N4       &kp LS(KP_N4)       &kp MINUS       &kp PLUS       &trans          &kp KP_N3        &kp EQUAL            &kp UNDERSCORE       &kp LS(KP_N1)           &kp LS(KP_N2)     &trans
+   &trans         &kp KP_N4       &kp LS(KP_N4)       &kp MINUS       &kp PLUS       &kp PLUS          &kp KP_N3        &kp EQUAL            &kp UNDERSCORE       &kp LS(KP_N1)           &kp LS(KP_N2)     &trans
                                              &mt RGUI TAB           &trans               &mo 7        &kp LS(KP_N9)       &kp KP_N9    &kp LS(KP_N3)
                         >;
                 };
